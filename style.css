@@ -1,0 +1,334 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+
+p{
+    font-family: "noto sans";
+    font-size: 1.8vw;
+}
+
+h1{
+    font-family: "pt sans narrow";
+    font-weight: 400;
+    font-size: 3vw;
+}
+
+h2{
+    font-family: "pt sans narrow";
+    font-weight: 400;
+    font-size: 3vw;
+    color: white;
+
+}
+
+.pt-sans narrow-regular { /*rubrik*/
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.pt-sans narrow-bold { /*rubrik*/
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+.noto-sans <uniquifier> { /* brödtext*/
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "width" 100;
+  }
+  
+
+body{
+    background-image: url(bakgrund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden; /* gör att naven är hela vägen till toppen*/
+   
+
+}
+
+nav {
+grid-area: nav;
+text-align: center;
+position: sticky;
+background-color: #F6E6E0;
+padding: 1%;
+width: 100%;
+margin: -1%;
+
+
+}
+
+nav li {
+    display: inline-block;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: "pt sans narrow";
+    font-size: 1.8vw;
+}
+
+nav a:hover{
+    color: #858760;
+}
+
+
+header {
+grid-area: header;
+text-align: center;
+padding-top: 10%;
+padding-bottom: 10%;
+}
+
+header p {
+    
+    padding-bottom: 7%;
+    font-size: 3vw;
+    font-family: "pt sans narrow";
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+.logotyp{
+    width: 75%;
+}
+
+.pil{
+    width: 4%;
+}
+
+main {
+    grid-area: main;
+}
+
+.textbox {
+    background-color: #F6E6E0;
+    padding: 2%;
+    margin: 10%;
+    text-align: center;
+}
+
+.button { /* reservera och spara - knapp */
+    background-color: #858760;
+    border: none;
+    color: white;
+    padding: 2% 5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vw;
+    margin: 2%;
+    font-family: "pt sans narrow";
+}
+
+.button:hover{
+background-color: #283f25;
+}
+
+
+.characters{ /*bild på startsida*/
+    float: right;
+    width: 30%;
+    margin-top: -10%;
+}
+
+.handling{ 
+    text-align:center;
+    margin: 10%;
+    margin-top: 35%;
+}
+
+.filmbeskrivning{
+
+    margin-top: 4%;
+    color: white;
+    font-family: "noto sans";
+    text-align: left;
+}
+
+.video
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+#trailertext{
+    text-align: center;
+}
+
+.recensioner{
+    color: white;
+    display: flex;
+    margin: 10%;
+}
+
+.recension1{
+    border: 1px solid white;
+    padding: 4%;
+    padding-bottom: 0;
+}
+.recension2{
+    border: 1px solid white;
+    border-left: 0px;
+    padding: 4%;
+    padding-bottom: 0;
+}
+
+.text1{
+    font-size: 1.5vw;
+
+}
+
+footer{
+    grid-area: footer;
+    background-color: #E8DFA1;
+    text-align: center;
+    padding: 0.5%;
+    font-family: "pt sans narrow";
+    font-size: 1.8vw;
+    padding-top: 2%;
+    width: 100%;
+    margin: -1%;  
+    padding-bottom: 2%;
+}
+
+footer a{
+
+text-decoration: none;
+color: black; 
+}
+
+
+footer a:hover{
+    color: #696b42;
+}
+
+#reserveratext{
+    font-family: "noto sans";
+    font-size: 1.5vw;
+    color: black;
+    margin-top: 2%;
+    letter-spacing: 0;
+}
+
+.textbox2{
+
+    background-color: #F6E6E0;
+    margin: 10%;
+    padding: 2%;
+    margin-top: -5%;
+    margin-bottom: -5%;
+    text-align: center;
+}
+
+form { /*namn och e-post fritext - rutor */
+    font-family: "noto sans";
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: -5%;
+    
+}
+
+.button2 {
+
+    background-color: #858760;
+    border: none;
+    color: white;
+    padding: 2% 5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vw;
+    margin: 2%;
+    font-family: "pt sans narrow";
+}
+
+.button2:hover{
+    background-color: #283f25;
+}
+
+.button2 a{
+    text-decoration: none;
+    color: white;
+}
+ 
+#hiddenText { /* antal hidden text*/
+
+    display: none; /* Döljer texten som standard */
+    font-family: "noto sans";
+
+}
+
+#hiddenText2 {/* datum hidden text*/
+
+   display: none; /* Döljer texten som standard */
+   font-family: "noto sans";
+
+}
+
+input[type=text]{
+    padding: 1%;
+    width: 40%;
+}
+
+select{
+    padding: 1%;
+    width: 19%;
+    font-size: 1.5vw;
+    font-family: "Noto Sans";
+    background-color: #ffc5a8;
+    font-family: "Noto Sans";
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 3%;
+}
+
+
+    .help{ /*rubrik på kontaktsida */
+
+        float: left;
+        margin-left: 7%;
+        font-size: 4vw;
+    
+        
+        
+        }
+        
+        .help2{ /*brödtext på kontaktsida */
+            float: left;
+            text-align: left;
+            margin-left: 7%;
+            position: absolute;
+            font-size: 2.3vw;
+            margin-top: 17%;
+            color: white;
+        
+        }
+        
+        .kontaktbild{ /* karaktärsbilder på kontaktsidan */
+            width: 25%;
+            float: right;
+            margin-right: 13%;
+        }
+
+        a{ /*länken i mailto*/
+            color: white;
+            text-decoration: none;
+        }
