@@ -1,0 +1,380 @@
+
+.container { /*Vi har använt oss av en column i vår grid*/
+    display: grid; 
+    grid-template-columns: 1fr; /* en kolumn*/
+    grid-template-rows: auto auto auto auto; /* 4 rows*/
+    grid-template-areas: /*hänvisningsnamn*/
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+
+
+p{ /*Typsnitt och stil för brödtext*/
+    font-family: "noto sans";
+    font-size: 1.2vw;
+}
+
+h1{ /*Typsnitt och stil för rubrik 1*/
+    font-family: "pt sans narrow";
+    font-weight: 400;
+    font-size: 2.5vw;
+}
+
+h2{ /*Typsnitt och stil för rubrik 2*/
+    font-family: "pt sans narrow";
+    font-weight: 400;
+    font-size: 2.5vw;
+    color: white;
+
+}
+
+.pt-sans narrow-regular { /* rubrik typsnitt från google fonts*/
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.noto-sans <uniquifier> { /*brödtext typsnitt från google fonts*/
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style:normal;
+      "width" 100;
+  } 
+
+
+  /* står parsningsfel på rad 46 när man validerar?? vad är problemet*/
+  
+
+body{
+    background-image: url(bakgrund.png); /*bakgrundsbild*/
+    background-repeat: no-repeat; /*EN bild*/
+    background-size: cover; /*bilden täcker hela*/
+    overflow-x: hidden; /* gör att naven är hela vägen till toppen*/
+    
+   
+
+}
+
+nav {
+grid-area: nav; /*längst upp i grid*/
+text-align: center;
+position: sticky; /* varför funkar inte sticky??, ska göra så att naven hänger med när man scrollar*/
+background-color: #F6E6E0;
+padding: 1%;
+width: 100%;
+margin: -1%; /* gör att naven är hela vägen till toppen*/
+
+}
+
+nav li {
+    display: inline-block; /*gör att naven ligger "i rad" från höger till vänster */
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+nav a { /*länkar i nav*/
+    text-decoration: none;
+    color: black;
+    font-family: "pt sans narrow";
+    font-size: 1.5vw;
+}
+
+nav a:hover{ /* hover på länkar i nav*/
+    color: #858760;
+}
+
+
+header {
+grid-area: header;
+text-align: center;
+padding-top: 12%;
+padding-bottom: 10%;
+}
+
+header p {
+    
+    padding-bottom: 7%;
+    font-size: 2vw;
+    font-family: "pt sans narrow";
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+.logotyp{
+    width: 60%;
+}
+
+.pil{ /*pil på startsidan*/
+    width: 4%;
+}
+
+main { /*plaverar main i grid*/
+    grid-area: main;
+}
+
+.textbox {  /* rosa box på index-sidan*/
+    background-color: #F6E6E0;
+    padding: 5%;
+    margin: 10%;
+    text-align: center;
+    
+}
+
+.textbox p {
+    margin-bottom: 5%;
+}
+
+.button { /* reservera-knapp på index-sidan*/
+    background-color: #858760;
+    border: none;
+    color: white;
+    padding: 2% 5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3vw;
+    margin: 2%;
+    font-family: "pt sans narrow";
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover{
+background-color: #283f25;
+}
+
+.button2 { /*sparaknapp på biljett-sidan*/
+
+    background-color: #858760;
+    border: none;
+    color: white;
+    padding: 2% 5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+    margin-top: 10%;
+    font-family: "pt sans narrow";
+}
+
+.button2 a{
+    text-decoration: none;
+    color: white;
+}
+
+.button2:hover{
+    background-color: #283f25;
+}
+
+
+.characters{ /*bild på startsida*/
+    float: right;
+    width: 30%;
+    margin-top: -15%;
+}
+
+
+.handling{ /* class för textruta på index-sidan */
+    text-align: center;
+    margin: 10%;
+    margin-top: 35%;
+}
+
+.filmbeskrivning{ /* class för textruta på index-sidan */
+
+    margin-top: 4%;
+    color: white;
+    font-family: "noto sans";
+    text-align: left;
+    font-size: 1.2vw;
+}
+
+.video /* styling för trailer */
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+#trailertext{ 
+    text-align: center;
+}
+
+.recensioner{ /* på index-sidan*/
+    color: white;
+    display: flex;
+    margin: 10%;
+}
+
+.recension1{
+    border: 1px solid white;
+    padding: 4%;
+    padding-bottom: 0;
+}
+.recension2{
+    border: 1px solid white;
+    border-left: 0px;
+    padding: 4%;
+    padding-bottom: 0;
+}
+
+.text1{ /*brödtext i recensioner*/
+    font-size: 1.2vw;
+
+}
+
+footer{
+    grid-area: footer;
+    background-color: #E8DFA1;
+    text-align: center;
+    padding: 0.5%;
+    font-family: "pt sans narrow";
+    font-size: 1.5vw;
+    padding-top: 2%;
+    width: 100%;
+    margin: -1%;  
+    padding-bottom: 2%;
+}
+
+footer a{
+text-decoration: none;
+color: black; 
+}
+
+
+footer a:hover{
+    color: #696b42;
+}
+
+#reserveratext{  /*underrubrik på biljettsidan*/
+    font-family: "noto sans";
+    font-size: 1.35vw;
+    color: black;
+    margin-top: 2%;
+    letter-spacing: 0;
+    text-align: center;
+
+}
+
+.textboxbiljett{ /*rosa box på biljettsidan*/
+
+    background-color: #F6E6E0;
+    margin: 10%;
+    padding: 5%;
+    margin-top: -5%;
+    margin-bottom: -5%;
+    text-align: center;
+}
+
+.textboxkontakt{ /*rosa box på kontaktsidan*/
+    background-color: #F6E6E0;
+    padding: 2%;
+    padding-bottom: 25%;
+    margin: 10%;
+    margin-top: -0.1%;
+    text-align: center;
+}
+
+.textboxtack{ /*rosa box på tacksidan*/
+    background-color: #F6E6E0;
+    padding: 2%;
+    margin: 10%;
+    margin-top: -2%;
+    text-align: center;
+}
+
+.textboxtack p {
+    color: black;
+    letter-spacing: 0;
+    font-family: "noto sans", sans-serif;
+    font-size: 1.5vw;
+}
+.textboxtack h1 {
+    color: black;
+    font-family: "pt sans narrow";
+    margin-bottom: 5%;
+
+}
+
+form { /*namn och e-post fritext - rutor */
+    font-family: "noto sans";
+    font-size: 1.2vw;
+    text-align: center;
+    margin-top: -5%;
+    
+}
+ 
+#hiddenText { /* antal hidden text*/
+
+    display: none; /* Döljer texten som standard */
+    font-family: "noto sans";
+
+}
+
+#hiddenText2 {/* datum hidden text*/
+
+   display: none; /* Döljer texten som standard */
+   font-family: "noto sans";
+
+}
+
+input[type=text]{
+    padding: 1%;
+    width: 40%;
+}
+
+select{ /* styling knappar för välj tid och antal*/
+    padding: 1%;
+    width: 19%;
+    font-size: 1.2vw;
+    font-family: "Noto Sans";
+    background-color: #ffc5a8;
+    font-family: "Noto Sans";
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 5%;
+}
+
+
+    .help{ /*rubrik på kontaktsida */
+
+        float: left;
+        margin-left: 7%;
+        font-size: 3vw;
+        color: black;
+    
+        
+        
+        }
+        
+        .help2{ /*brödtext på kontaktsida */
+            font-family: "noto sans";
+            float: left;
+            text-align: left;
+            margin-left: 5%;
+            position: absolute;
+            font-size: 1.5vw;
+            margin-top: 10%;
+            color: black;
+            letter-spacing: 0;
+        
+        }
+        
+        .kontaktbild{ /* karaktärsbilder på kontaktsidan */
+            width: 25%;
+            float: right;
+            margin-right: 13%;
+        }
+
+        .help2 a { /*länken i mailto*/
+            color: #858760;
+            text-decoration: none;
+        text-decoration: none;
+        }
+    
