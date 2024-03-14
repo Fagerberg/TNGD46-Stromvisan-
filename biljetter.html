@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="sv">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Strömvisan</title>
+      <!-- länk till CSS-->
+	<link href="style.css" rel="stylesheet" type="text/css">
+   <!-- länkt till externa fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+     <!--container för grid-->
+<div class="container">
+    
+<!--navigering mellan sidorna-->
+    <nav>
+    
+        <ul>
+                
+        <li><a href="index.html">HEM</a> </li>
+        <li><a href="biljetter.html">BILJETTER</a> </li>
+        <li><a href="kontakt.html"> KONTAKT </a> </li>
+        
+     </ul>
+    </nav>
+
+
+
+    <header>
+
+        <div class="textboxbiljett"> <!--rosa box bakom-->
+          <!--affisch-->
+          <img src="affisch_stromvisan.png" alt="affisch för filmen" class="affisch">
+            <h1>RESERVERA BILJETTER</h1>
+            <p id="reserveratext">Reservera biljetter här - betala på plats på Gnema</p>
+    
+    
+    
+            <form> <!-- Fritext för namn och epost-->
+                <label for="fname">Namn:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="epost">E-post:</label><br>
+                <input type="text" id="epost" name="epost"> <br>
+               
+              </form>
+
+            
+            <div class="select"> <!--select tid och antal, drop down bar-->
+                <select>
+                  <option value="0">Välj tid</option>
+                  <option value="1">16.00 21/7-2024</option>
+                  <option value="2">18.00 21/7-2024</option>
+                  <option value="3">20.00 21/7-2024</option>
+                  <option value="4">22.00 21/7-2024</option>
+                </select>
+    
+                <select>
+                    <option value="0">Välj antal</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="4">5</option>
+                    <option value="4">6</option>
+                    <option value="4">7</option>
+                    <option value="4">8</option>
+                  </select>
+                
+              </div>
+            
+            <!--knapp skickar dig till tacksida-->  
+              <a href="tack.html" class="button2">SPARA</a> 
+
+
+              
+              </div>
+
+    </header>
+
+    <main>
+
+    </main>
+    
+</div>
+
+<p class="biljettfooter"> &copy; Norcopia Pictures 2024 </p> <!-- text som en footer -->
+
+<!--länk till javascript för reservation av biljetter-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
